@@ -3,89 +3,82 @@ import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import NavHeader from "@/app/header/page";
 
-// This would typically come from a CMS or database
+
 const projects = [
   {
-    slug: "spring-collection",
-    title: "Spring Collection",
-    description: "Sustainable fashion designs inspired by nature",
-    year: "2025",
-    thumbnail: "/placeholder.svg?height=600&width=600",
-  },
-  {
-    slug: "textile-experiments",
-    title: "Textile Experiments",
-    description: "Exploring innovative materials and techniques",
+    slug: "sailor-moon-shirt",
+    title: "Sailor Moon Shirt",
+    description: "The Sailor Moon Series",
     year: "2024",
-    thumbnail: "/placeholder.svg?height=600&width=600",
+    thumbnail: "/sailor-moon-shirt-1.jpg",
   },
   {
-    slug: "urban-sketches",
-    title: "Urban Sketches",
-    description: "City-inspired artwork and illustrations",
+    slug: "sailor-moon-wand",
+    title: "Sailor Moon Wand",
+    description: "The Sailor Moon Series",
     year: "2024",
-    thumbnail: "/placeholder.svg?height=600&width=600",
+    thumbnail: "/wand-1.jpg",
   },
   {
-    slug: "concept-designs",
-    title: "Concept Designs",
-    description: "Experimental fashion concepts and prototypes",
+    slug: "plus-size-body",
+    title: "Drawing on a Plus Size Body",
+    description: "Fashion Sketches and Flats",
+    year: "2024",
+    thumbnail: "/plus-size-1.png",
+  },
+  {
+    slug: "man-best-friend",
+    title: "A Man's Best Friend",
+    description: "Fashion Sketches and Flats",
     year: "2023",
-    thumbnail: "/placeholder.svg?height=600&width=600",
+    thumbnail: "/dog-fashion-1.png",
   },
   {
-    slug: "color-studies",
-    title: "Color Studies",
-    description: "Exploration of color theory in fashion and art",
-    year: "2023",
-    thumbnail: "/placeholder.svg?height=600&width=600",
+    slug: "open-heart",
+    title: "Open Heart",
+    description: "Sewing Series",
+    year: "2024",
+    thumbnail: "/open-heart-1.jpg",
   },
   {
-    slug: "pattern-work",
-    title: "Pattern Work",
-    description: "Original textile patterns and print designs",
-    year: "2022",
-    thumbnail: "/placeholder.svg?height=600&width=600",
+    slug: "romantic-dream",
+    title: "A Romantic Dream",
+    description: "Sewing Series",
+    year: "2024",
+    thumbnail: "/romantic-dream-1.jpg",
   },
   {
-    slug: "fashion-illustrations",
-    title: "Fashion Illustrations",
-    description: "Hand-drawn fashion illustrations and concept art",
-    year: "2022",
-    thumbnail: "/placeholder.svg?height=600&width=600",
+    slug: "lifescape-book",
+    title: "Lifescape Book",
+    description: "Fine Arts",
+    year: "2024",
+    thumbnail: "/lifescape-2.jpg",
   },
   {
-    slug: "material-studies",
-    title: "Material Studies",
-    description: "Exploration of fabric textures and properties",
-    year: "2021",
-    thumbnail: "/placeholder.svg?height=600&width=600",
+    slug: "cruelty-fast-fashion",
+    title: "The Cruelty of Fast Fashion",
+    description: "Fine Arts",
+    year: "2024",
+    thumbnail: "/fast-fashion-1.jpg",
+  },
+  {
+    slug: "layers-of-meaning",
+    title: "Layers of Meaning",
+    description: "Fine Arts",
+    year: "2024",
+    thumbnail: "/layers-meaning-1.jpg",
   },
 ]
 
 export default function ProjectsPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold">PORTFOLIO</span>
-        </Link>
-        <nav className="flex gap-6">
-          <Link href="/" className="font-medium">
-            Work
-          </Link>
-          <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-            About
-          </Link>
-          <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <NavHeader />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <Button variant="ghost" size="sm" asChild className="mb-8">
               <Link href="/">
                 <ArrowLeft className="mr-2 h-4 w-4" />

@@ -1,48 +1,30 @@
 import Link from "next/link"
 import Image from "next/image"
+import NavHeader from "@/app/header/page";
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold">PORTFOLIO</span>
-        </Link>
-        <nav className="flex gap-6">
-          <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-            Work
-          </Link>
-          <Link href="/about" className="font-medium">
-            About
-          </Link>
-          <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <NavHeader />
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+        <section className="w-full py-6 md:py-23 lg:py-20">
+          <div className="px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h1>
-                <p className="text-muted-foreground">
-                  I'm a design student passionate about creating innovative clothing and artwork that pushes boundaries
-                  and explores new concepts.
-                </p>
                 <div className="space-y-4">
                   <p>
-                    My work focuses on the intersection of sustainability, technology, and traditional craftsmanship. I
-                    believe in creating designs that not only look beautiful but also tell a story and serve a purpose.
+                    Hello! My name is Kasey Baugher, and I am a Vietnamese American emerging fashion designer studying
+                    at Parsons School of Design. I am pursuing a degree in Fashion Design with a minor in Fashion
+                    Business. My work is deeply inspired by my Vietnamese heritage and the diverse individuals who
+                    shape and support me.
                   </p>
                   <p>
-                    Throughout my studies at [Design School], I've developed a strong foundation in textile design,
-                    pattern making, illustration, and digital design tools. My approach combines meticulous attention to
-                    detail with bold experimentation.
-                  </p>
-                  <p>
-                    When I'm not designing, you can find me exploring art galleries, photographing urban landscapes, or
-                    experimenting with new materials and techniques in my studio.
+                    I specialize in techniques that add depth, movement, and artistry to every piece I create. I find
+                    joy in blending traditional craftsmanship, such as intricate beading, with contemporary
+                    innovations like laserwork. As I continue to grow in the fashion industy, I am eager to gain hands
+                    on experience, collaborate with fellow creatives, and refine my skills in bringing visionary
+                    designs to life.
                   </p>
                 </div>
                 <div className="space-y-4">
@@ -50,11 +32,7 @@ export default function AboutPage() {
                   <ul className="space-y-2">
                     <li>
                       <div className="font-medium">Bachelor of Fine Arts in Fashion Design</div>
-                      <div className="text-sm text-muted-foreground">[Design School], Expected 2025</div>
-                    </li>
-                    <li>
-                      <div className="font-medium">Certificate in Sustainable Textile Innovation</div>
-                      <div className="text-sm text-muted-foreground">[Institution], 2023</div>
+                      <div className="text-sm text-muted-foreground">Parsons School of Design, Expected 2027</div>
                     </li>
                   </ul>
                 </div>
@@ -68,18 +46,17 @@ export default function AboutPage() {
                     <div className="rounded-full bg-muted px-3 py-1 text-sm">Digital Design</div>
                     <div className="rounded-full bg-muted px-3 py-1 text-sm">Sustainable Practices</div>
                     <div className="rounded-full bg-muted px-3 py-1 text-sm">Color Theory</div>
-                    <div className="rounded-full bg-muted px-3 py-1 text-sm">3D Modeling</div>
                   </div>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="overflow-hidden rounded-lg">
                   <Image
-                    src="/placeholder.svg?height=800&width=600"
+                    src="/kasey-about-me.jpg"
                     alt="Designer portrait"
-                    width={600}
-                    height={800}
-                    className="mx-auto aspect-[3/4] object-cover"
+                    width={500}
+                    height={700}
+                    className="mx-auto object-cover rounded-lg"
                   />
                 </div>
               </div>

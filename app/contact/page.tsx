@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
+import NavHeader from "@/app/header/page";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -44,22 +45,7 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold">PORTFOLIO</span>
-        </Link>
-        <nav className="flex gap-6">
-          <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
-            Work
-          </Link>
-          <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-            About
-          </Link>
-          <Link href="/contact" className="font-medium">
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <NavHeader />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">

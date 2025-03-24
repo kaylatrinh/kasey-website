@@ -3,59 +3,45 @@ import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
+import NavHeader from "@/app/header/page";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center">
-          <span className="text-xl font-bold">PORTFOLIO</span>
-        </Link>
-        <nav className="flex gap-6">
-          <Link href="/" className="font-medium">
-            Work
-          </Link>
-          <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
-            About
-          </Link>
-          <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
-            Contact
-          </Link>
-        </nav>
-      </header>
+      <NavHeader />
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Creative Design Portfolio</h1>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl">Kasey Baugher</h1>
                 <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Showcasing innovative clothing designs and artwork
+                  Fashion Design Portfolio
                 </p>
               </div>
             </div>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
-          <div className="container px-4 md:px-6">
+          <div className="px-4 md:px-6">
             <div className="flex flex-col items-start gap-4 md:gap-8">
               <div className="flex items-center gap-2">
                 <div className="h-1 w-12 bg-primary rounded-full" />
-                <h2 className="text-xl font-bold tracking-tight">Featured Projects</h2>
+                <h2 className="text-xl font-bold tracking-tight">Project Series</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <Link href="/projects/spring-collection" className="group">
                   <div className="overflow-hidden rounded-lg">
                     <Image
                       src="/placeholder.svg?height=600&width=600"
-                      alt="Spring Collection"
+                      alt="Sailor Moon Series"
                       width={600}
                       height={600}
                       className="aspect-square object-cover transition-transform group-hover:scale-105"
                     />
                   </div>
                   <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Spring Collection</h3>
+                    <h3 className="font-medium">Sailor Moon Series</h3>
                     <p className="text-sm text-muted-foreground">Sustainable fashion designs inspired by nature</p>
                   </div>
                 </Link>
@@ -70,7 +56,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Textile Experiments</h3>
+                    <h3 className="font-medium">Fashion Sketches and Flats</h3>
                     <p className="text-sm text-muted-foreground">Exploring innovative materials and techniques</p>
                   </div>
                 </Link>
@@ -85,7 +71,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Urban Sketches</h3>
+                    <h3 className="font-medium">Sewing Series</h3>
                     <p className="text-sm text-muted-foreground">City-inspired artwork and illustrations</p>
                   </div>
                 </Link>
@@ -100,38 +86,8 @@ export default function Home() {
                     />
                   </div>
                   <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Concept Designs</h3>
+                    <h3 className="font-medium">Fine Arts</h3>
                     <p className="text-sm text-muted-foreground">Experimental fashion concepts and prototypes</p>
-                  </div>
-                </Link>
-                <Link href="/projects/color-studies" className="group">
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Color Studies"
-                      width={600}
-                      height={600}
-                      className="aspect-square object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Color Studies</h3>
-                    <p className="text-sm text-muted-foreground">Exploration of color theory in fashion and art</p>
-                  </div>
-                </Link>
-                <Link href="/projects/pattern-work" className="group">
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Pattern Work"
-                      width={600}
-                      height={600}
-                      className="aspect-square object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Pattern Work</h3>
-                    <p className="text-sm text-muted-foreground">Original textile patterns and print designs</p>
                   </div>
                 </Link>
               </div>
