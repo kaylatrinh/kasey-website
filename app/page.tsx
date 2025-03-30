@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import NavHeader from "@/app/header/page";
+import {series} from "@/app/projects";
+import NavFooter from "@/app/footer/page";
 
 export default function Home() {
   return (
@@ -30,66 +32,23 @@ export default function Home() {
                 <h2 className="text-xl font-bold tracking-tight">Project Series</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <Link href="/projects/spring-collection" className="group">
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Sailor Moon Series"
-                      width={600}
-                      height={600}
-                      className="aspect-square object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Sailor Moon Series</h3>
-                    <p className="text-sm text-muted-foreground">Sustainable fashion designs inspired by nature</p>
-                  </div>
-                </Link>
-                <Link href="/projects/textile-experiments" className="group">
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Textile Experiments"
-                      width={600}
-                      height={600}
-                      className="aspect-square object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Fashion Sketches and Flats</h3>
-                    <p className="text-sm text-muted-foreground">Exploring innovative materials and techniques</p>
-                  </div>
-                </Link>
-                <Link href="/projects/urban-sketches" className="group">
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Urban Sketches"
-                      width={600}
-                      height={600}
-                      className="aspect-square object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Sewing Series</h3>
-                    <p className="text-sm text-muted-foreground">City-inspired artwork and illustrations</p>
-                  </div>
-                </Link>
-                <Link href="/projects/concept-designs" className="group">
-                  <div className="overflow-hidden rounded-lg">
-                    <Image
-                      src="/placeholder.svg?height=600&width=600"
-                      alt="Concept Designs"
-                      width={600}
-                      height={600}
-                      className="aspect-square object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <h3 className="font-medium">Fine Arts</h3>
-                    <p className="text-sm text-muted-foreground">Experimental fashion concepts and prototypes</p>
-                  </div>
-                </Link>
+                {series.map((project) => (
+                    <Link key={project.slug} href={`/series/${project.slug}`} className="group">
+                      <div className="overflow-hidden rounded-lg">
+                        <Image
+                            src={project.thumbnail || "/placeholder.svg"}
+                            alt={project.title}
+                            width={600}
+                            height={600}
+                            className="aspect-square object-cover transition-transform group-hover:scale-105"
+                        />
+                      </div>
+                      <div className="mt-4 space-y-2">
+                        <h3 className="font-medium">{project.title}</h3>
+                        <p className="text-sm text-muted-foreground">{project.year}</p>
+                      </div>
+                    </Link>
+                ))}
               </div>
               <Button asChild className="mt-8">
                 <Link href="/projects">
@@ -100,20 +59,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-muted-foreground">© 2025 Portfolio. All rights reserved.</p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Instagram
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
-            Behance
-          </Link>
-          <Link href="#" className="text-xs hover:underline underline-offset-4">
-            LinkedIn
-          </Link>
-        </nav>
-      </footer>
+      <NavFooter />
     </div>
   )
 }

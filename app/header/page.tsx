@@ -10,7 +10,7 @@ export default function NavHeader() {
                     <Link href="/" className="text-muted-foreground hover:text-foreground transition-colors">
                         Work
                     </Link>
-                    <Link href="/about" className="font-medium">
+                    <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
                         About
                     </Link>
                     <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
