@@ -80,19 +80,19 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-                <div className="space-y-4 mt-8">
-                  <h2 className="text-xl font-bold">Connect</h2>
-                  <div className="flex gap-4">
-                    <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                      Instagram
-                    </Link>
-                    <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                      LinkedIn
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4">
+              {/*  <div className="space-y-4 mt-8">*/}
+              {/*    <h2 className="text-xl font-bold">Connect</h2>*/}
+              {/*    <div className="flex gap-4">*/}
+              {/*      <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">*/}
+              {/*        Instagram*/}
+              {/*      </Link>*/}
+              {/*      <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors">*/}
+              {/*        LinkedIn*/}
+              {/*      </Link>*/}
+              {/*    </div>*/}
+              {/*  </div>*/}
+              {/*</div>*/}
+              {/*<div className="space-y-4">*/}
                 {/*<form onSubmit={handleSubmit} className="grid gap-4">*/}
                 {/*  <div className="grid gap-2">*/}
                 {/*    <Label htmlFor="name">Name</Label>*/}
