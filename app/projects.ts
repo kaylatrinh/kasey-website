@@ -88,7 +88,21 @@ export const projects = {
             "/romantic-dream-3.jpg",
         ],
         details:
-            "My father used to read me fairytale stories every night before bed when I was a child. I was enthralled by the princesses' ethereal silhouettes and fell in love with the grace and elegance of their gowns. I was inspired to create a skirt with a striking bow at the back and soft pleats, which perfectly captured the charming feel I've always adorned from my childhood. \n",
+            "My father used to read me fairytale stories every night before bed when I was a child. I was enthralled by the princesses' ethereal silhouettes and fell in love with the grace and elegance of their gowns. I was inspired to create a skirt with a striking bow at the back and soft pleats, which perfectly captured the charming feel I've always adorned from my childhood.",
+    },
+    "knit-dress": {
+        title: "Knit Dress",
+        description: "Sewing Series, 2025",
+        images: [
+            "/knit1.png",
+            "/knit2.png",
+            "/knit3.png",
+            "/knit4.png",
+            "/knit5.png",
+            "/knit6.png",
+        ],
+        details:
+            "This dress was solely made by draping techniques. I began by carefully manipulating the fabric into a dress like form, then marked each specific pleat to transfer the exact shape of the dress. After pinning together the marked dress, I began overlocking each seam to complete the garment. I then adorned the dress with buttons and gems to put the look together.",
     },
     "lifescape-book": {
         title: "Lifescape Book",
@@ -170,6 +184,14 @@ export const project_slugs = [
         description: "Sewing Series",
         year: "2024",
         thumbnail: "/romantic-dream-1.jpg",
+    },
+    {
+        category: "sewing-series",
+        slug: "knit-dress",
+        title: "Knit Dress",
+        description: "Sewing Series",
+        year: "2025",
+        thumbnail: "/knit3.png",
     },
     {
         category: "fine-arts-series",
